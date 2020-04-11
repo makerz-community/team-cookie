@@ -1,0 +1,8 @@
+{
+    "name": "makerz/cookie",
+    "description": "",
+    "type": "project",
+    "require": {
+      "robmorgan/phinx": "*"
+    }
+}

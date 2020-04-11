@@ -1,0 +1,40 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - 8080:80
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./www/html:/var/www/html
+    depends_on:
+      - php
+
+  php:
+    build: ./php
+    volumes:
+      - ./www/html:/var/www/html
+    links:
+      - db
+
+  db:
+    build: ./db
+    ports:
+      - 13306:3306
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - ./db/conf.d:/etc/mysql/conf.d
+      - ./db/init:/docker-entrypoint-initdb.d
+      - ./log/mysql:/var/log/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: cookie_site
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - 8888:80
+    depends_on:
+      - db
