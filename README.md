@@ -55,3 +55,33 @@ docker-compose exec db bash
 mysql -u root -p
 > (docker-compose.ymlに記載のパスワードを入力)
 ```
+
+## データベースのテーブルの変更の仕方
+
+チーム開発では、データベースの構成が全員に共有されている必要があります。
+誰かが追加した/変更したテーブルを検知し、自分が開発に使っているデータベースにもその変更を反映させたい。
+本プロジェクトでは、そういった「データベースのバージョン管理」であるマイグレーションを取り入れ、現場のチーム開発に近いことを経験しましょう！
+
+### 使用するマイグレーションツール
+
+https://phinx.org/
+
+### 実際のマイグレーションの使い方
+
+[ここ](https://qiita.com/hypermkt/items/b915b8a9fbda2f0c612e)や[ここ](https://qiita.com/macchaka/items/3decc5f48a15f00e188c)をかなり参考にしています。ぜひ見てみてください
+
+- コンテナが立ち上がっていない場合は、(本README.mdがあるディレクトリで) docker-compose up でコンテナを立ち上げる
+- `docker-compose exec php bash` で、phpコンテナの中（Linux）に入る
+- `vendor/bin/phinx status` が実行できることを確認する
+
+#### 自分がテーブルを追加する場合
+
+- `vendor/bin/phinx create <変更内容>`
+  - users っていうテーブルを作成するなら、変更内容は `AddUsersTable` などになります
+- 実際の変更内容（どういった変更をデータベースにするか？）を記載する「マイグレーションファイル」が `db/migrations` に作成されます
+- サンプルを見たり、ドキュメントを見ながら変更内容を記載します
+- `vendor/bin/phinx migrate -e development` でデータベースへの変更を実行できます
+  - [このへん](https://qiita.com/hypermkt/items/b915b8a9fbda2f0c612e#%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BC%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%A6%E5%AE%9F%E8%A1%8C)の、バージョンナンバーを指定して実行するケースや、dry-run（よくこの言葉は使われます）での実行なども見ておきましょう
+
+
+#### 他のメンバーのマイグレーションとバッティングした倍

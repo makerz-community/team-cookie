@@ -13,7 +13,7 @@ services:
   php:
     build: ./php
     volumes:
-      - ./www/html:/var/www/html
+      - ./php/www/html:/var/www/html
     links:
       - db
 
