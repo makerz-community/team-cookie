@@ -15,7 +15,7 @@ makerzのcookieチームの制作アプリです。
 3. このリポジトリをclone
 
   下記コマンドの実行で、GitHub上にあるソースを落とします
-  (ソースのフォルダをつくりたいディレクトリで、)
+  (ソースのフォルダをつくりたいディレクトリで)
   ```bash
   git clone https://github.com/makerz-community/team-cookie.git
   ```
