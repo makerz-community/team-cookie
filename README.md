@@ -52,8 +52,20 @@ docker-compose up している状態で、
 ```bash
 docker-compose exec db bash
 (コンテナに入ったので、)
+
 mysql -u root -p
 > (docker-compose.ymlに記載のパスワードを入力)
+
+\s
+(DBのステータスを確認,Current database:が空白)
+
+use cookie_site
+(使用するDBを選択)
+Database changedが表示される
+
+\s
+(DBのステータスを確認,Current database: cookie_site になっていたらOK)
+
 ```
 
 ## データベースのテーブルの変更の仕方
