@@ -54,7 +54,7 @@ docker-compose exec db bash
 (コンテナに入ったので、)
 
 mysql -u root -p
-> (docker-compose.ymlに記載のパスワードを入力)
+> (docker-compose.ymlに記載の"MYSQL_ROOT_PASSWORD"を入力)
 
 \s
 (DBのステータスを確認,Current database:が空白)
@@ -66,6 +66,8 @@ Database changedが表示される
 \s
 (DBのステータスを確認,Current database: cookie_site になっていたらOK)
 
+exit
+(mysqlがら出たい時)
 ```
 
 ## データベースのテーブルの変更の仕方
