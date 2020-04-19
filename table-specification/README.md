@@ -11,7 +11,7 @@
     　　　　　　　例）◯:announcements, beautiful_flowers
     　　　　　　　　　×:announce, beautiful
 
-    カラム名 : カラム名単独でもデータの内容がわかる形にする。1 or 0 の値を取るカラムは、is か has で始める。
+    カラム名 : カラム名単独でもデータの内容がわかる形にする。1 or 0 / true or falseの値を取るカラムは、is か has で始める。
     　　　　　　　例）type, is_received  
     ```
 
