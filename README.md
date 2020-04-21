@@ -15,7 +15,7 @@ makerzのcookieチームの制作アプリです。
 3. このリポジトリをclone
 
   下記コマンドの実行で、GitHub上にあるソースを落とします
-  (ソースのフォルダをつくりたいディレクトリで、)
+  (ソースのフォルダをつくりたいディレクトリで)
   ```bash
   git clone https://github.com/makerz-community/team-cookie.git
   ```
@@ -86,6 +86,7 @@ https://phinx.org/
 
 - コンテナが立ち上がっていない場合は、(本README.mdがあるディレクトリで) docker-compose up でコンテナを立ち上げる
 - `docker-compose exec php bash` で、phpコンテナの中（Linux）に入る
+- `composer install`を実行
 - `vendor/bin/phinx status` が実行できることを確認する
 
 #### 自分がテーブルを追加する場合
