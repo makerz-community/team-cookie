@@ -6,7 +6,7 @@ services:
       - 8080:80
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./www/html:/var/www/html
+      - ./php/www/html:/var/www/html
     depends_on:
       - php
 
