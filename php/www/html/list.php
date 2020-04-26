@@ -9,9 +9,9 @@
 
 <?php
 // 　　データと接続
-$dsn = 'mysql:dbname=members;host=localhost';
+$dsn = 'mysql:dbname=cookie_site;host=db';
 $user = 'root';
-$password = '';
+$password = 'root_password';
 $dbh = new PDO($dsn,$user,$password);
 $dbh->query('SET NAMES utf8');
 // 　　　SQLの指令文
@@ -21,7 +21,7 @@ $stmt->execute();
 
 <table><tbody>
    <tr><th>名前</th></tr>
-	 <?php foreach ($stmt as $row):{ ?>
+	 <?php foreach ($stmt as $row){ ?>
 	<tr>
 	<td><?=htmlspecialchars($row['name'], ENT_QUOTES)?></td>
 	<td><a href=""=<?=htmlspecialchars($row['name'], ENT_QUOTES)?>>詳細ページ</a></td>
