@@ -24,7 +24,7 @@ else
 <body>
   
 （仮）トップページです。
-<!-- 実際はkaeruさんのトップページ -->
+<!-- 実際はkaeryさんのトップページ -->
 <br>
 <a href="cookie_logout.php">ログアウト</a><br>
 
