@@ -17,7 +17,7 @@ $email = $rec['email'];
       <h2>メンバー情報</h2>
       <p>id:<?php echo $id; ?></p>
       <p>名前:<?php echo $name; ?></p>
-      <p>id:<?php echo $email; ?></p>
+      <p>メール:<?php echo $email; ?></p>
       <input type="button" onclick="history.back()" value="back">
   </div>
 </body>
