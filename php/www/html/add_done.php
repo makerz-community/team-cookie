@@ -24,7 +24,7 @@ $dbh=new PDO($dsn,$user,$password);
 $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 //sqlでデータを挿入
-$sql='INSERT INTO members (name,email,password) VALUES (?,?,?)';
+$sql='INSERT INTO members (name,email,password,created_date,updated_date) VALUES (?,?,?,current_timestamp,current_timestamp)';
 $stmt=$dbh->prepare($sql);
 $data[]=$member_name;
 $data[]=$member_email;
