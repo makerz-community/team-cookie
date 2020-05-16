@@ -11,13 +11,13 @@ session_destroy();
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>（仮）cookie</title>
+  <meta charset="UTF-8">
+  <title>（仮）cookie</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  ログアウトしました。<br>
-  <br>
+  <p>ログアウトしました。</p>
   <a href="cookie_login.php">ログイン画面へ</a>
   
 </body>

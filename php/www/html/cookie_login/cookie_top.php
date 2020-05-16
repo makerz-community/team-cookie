@@ -18,14 +18,14 @@ else
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>（仮）cookie</title>
+  <meta charset="UTF-8">
+  <title>（仮）cookie</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   
-（仮）トップページです。
+<h2>（仮）トップページ</h2>
 <!-- 実際はkaeruさんのトップページ -->
-<br>
 <a href="cookie_logout.php">ログアウト</a><br>
 
 </body>
