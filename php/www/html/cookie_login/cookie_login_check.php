@@ -9,6 +9,8 @@ try
   $member_email=htmlspecialchars($member_email,ENT_QUOTES,'UTF-8');
   $member_pass=htmlspecialchars($member_pass,ENT_QUOTES,'UTF-8');
 
+  $staff_pass=md5($staff_pass);
+
   // データベースと接続
   $dsn = 'mysql:dbname=cookie_site;host=db;';
   $user = 'root';

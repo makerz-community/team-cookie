@@ -8,15 +8,15 @@
 <body>
   
   <div class="container">
-      <h2>メンバーログイン</h2>
+      <h2>Member Login</h2>
       <br>
       <form action="cookie_login_check.php" method="post">
-        <p>email</p>
+        <p>Email</p>
         <input type="text" name="email"><br>
-        <p>パスワード</p>
+        <p>Password</p>
         <input type="password" name="pass"><br>
         <br>
-        <input type="submit" value="ログイン">
+        <input type="submit" value="Login">
       </form>
   </div>
 </body>
