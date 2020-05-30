@@ -4,7 +4,7 @@ session_regenerate_id(true);
 if(isset($_SESSION['login'])==false)
 {
   print 'ログインされていません。<br>';
-  print'<a href="cookie_login.html">ログイン画面へ</a>';
+  print'<a href="cookie_login.php">ログイン画面へ</a>';
   exit();
 }
 else
@@ -13,6 +13,7 @@ else
   print 'さんログイン中<br>';
   print '<br>';
 }
+
 ?>
 
 <!DOCTYPE html>
