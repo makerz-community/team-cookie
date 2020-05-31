@@ -51,7 +51,7 @@
 <br>
 
   <div class="twitter">
-    <a href="<?php echo $oauthUrl; ?>"><img src=”images/signin_button.png” alt="twitter_button"></a>
+    <a href="<?php echo $oauthUrl; ?>"><img src="images/signin_button.png" alt="twitter_button"></a>
   </div>
 
 </body>
