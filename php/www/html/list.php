@@ -1,3 +1,21 @@
+<?php
+session_start();
+session_regenerate_id(true);
+if(isset($_SESSION['login'])==false)
+{
+  print 'ログインされていません。<br>';
+  print'<a href="cookie_login.php">ログイン画面へ</a>';
+  exit();
+}
+else
+{
+  print $_SESSION['member_name'];
+  print 'さんログイン中<br>';
+  print '<br>';
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -25,6 +43,8 @@ require("common.php");
 <?php
  $dbh = null;
 ?>
+<br>
+<a href="cookie_login/cookie_logout.php">ログアウト</a><br>
 
 </body>
 </html>

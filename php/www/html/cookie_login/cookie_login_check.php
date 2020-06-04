@@ -43,7 +43,7 @@ try
     $_SESSION['login']=1;
     $_SESSION['member_email']=$member_emal;
     $_SESSION['member_name']=$rec['name'];
-    header('Location:cookie_top.php');
+    header('Location:../list.php');
     exit();
   }
 
