@@ -17,16 +17,34 @@ else
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>（仮）cookie</title>
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  
-<h2>（仮）トップページ</h2>
-<!-- 実際はkaeruさんのトップページ -->
+
+<?php
+require("../common.php");
+?>
+
+  <table><tbody>
+   <tr><th>名前</th></tr>
+	 <?php foreach ($stmt as $row){ ?>
+	<tr>
+	<td><?=htmlspecialchars($row['name'], ENT_QUOTES)?></td>
+	<td><a href=""=<?=htmlspecialchars($row['name'], ENT_QUOTES)?>>詳細ページ</a></td>
+	</tr>
+  <?php } ?>
+</tbody></table>
+
+<!-- 切断処理 -->
+<?php
+ $dbh = null;
+?>
+
 <a href="cookie_logout.php">ログアウト</a><br>
 
 </body>

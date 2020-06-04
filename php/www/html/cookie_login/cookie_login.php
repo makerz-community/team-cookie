@@ -10,7 +10,7 @@
     define('TWITTER_API_KEY', 'pKyR8QKI3tsLPVvVGeQX2hbCU');//Consumer Key (API Key)
     define('TWITTER_API_SECRET', 'Iy3PBOQMxrU0HWRxPfL8j74lWNQcDflUTUQb2U5NI5N7swAsZd');//Consumer Secret (API Secret)
 
-    define('CALLBACK_URL', 'http://127.0.0.1:8080/cookie_login/callback.php');//登録したコールバックURL
+    define('CALLBACK_URL', 'http://127.0.0.1:8080/cookie_login/twitter_callback.php');//登録したコールバックURL
 
     //「abraham/twitteroauth」ライブラリのインスタンスを生成し、Twitterからリクエストトークンを取得する
     $connection = new TwitterOAuth(TWITTER_API_KEY, TWITTER_API_SECRET, $access_token, $access_token_secret);
