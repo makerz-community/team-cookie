@@ -38,7 +38,7 @@
 
     $helper = $fb->getRedirectLoginHelper();
     $permissions = [];
-    $loginUrl = $helper->getLoginUrl('https://69ab5694b2ac.ngrok.io/cookie_login/facebook_callback.php',$permissions);
+    $loginUrl = $helper->getLoginUrl('https://20c05d4f9786.ngrok.io/cookie_login/facebook_callback.php',$permissions);
     
   ?>
 
@@ -52,6 +52,9 @@
 <body>
 
   <div class="container">
+
+    <!-- emailとパスワードでログイン -->
+
       <h2>Member Sign in</h2>
       <br>
       <form action="cookie_login_check.php" method="post">
@@ -62,31 +65,24 @@
         <br>
         <input type="submit" value="Sign in">
       </form>
+
   </div>
 
 <br>
 <br>
+<br>
 
+  <!-- Twitterアカウントでログイン -->
   <div class="twitter">
     <a href="<?php echo $oauthUrl; ?>"><img src="images/t_button.png" alt="twitter_button"></a>
   </div>
 
-<!-- <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=278921433304446&autoLogAppEvents=1"></script>
+<br>
 
-<div class="fb-login-button" data-size="medium" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div> -->
-
-<!-- <div class="FbBtnLabel">
-    <a class="FbBtn" href="<?php echo $loginUrl; ?>"><img src="images/f_button.png" alt="facebook_button"></a>
-  </div> -->
-
-  <a class="FbBtn" href="https://www.facebook.com/dialog/oauth?client_id={your-app-id}&amp;redirect_uri={redirect-uri}">
-   <div class="FbBtnLabel">Facebookでログイン</div>
-</a>
-
-<?php
-echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
-?>
+  <!-- Facebookアカウントでログイン -->
+  <div class="facebook">
+    <a href="<?php echo $loginUrl; ?>"><img src="images/f_button.png" alt="facebook_button"></a>
+  </div>
 
 </body>
 </html>
