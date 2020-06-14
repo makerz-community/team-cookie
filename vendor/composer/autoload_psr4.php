@@ -17,6 +17,7 @@ return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Phinx\\' => array($vendorDir . '/robmorgan/phinx/src/Phinx'),
+    'Facebook\\' => array($vendorDir . '/facebook/graph-sdk/src/Facebook'),
     'Cake\\Utility\\' => array($vendorDir . '/cakephp/utility'),
     'Cake\\Datasource\\' => array($vendorDir . '/cakephp/datasource'),
     'Cake\\Database\\' => array($vendorDir . '/cakephp/database'),
