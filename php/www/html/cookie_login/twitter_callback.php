@@ -28,6 +28,7 @@ if (isset($_GET['oauth_token']) && $request_token['oauth_token'] !== $_GET['oaut
 } else {
   $_SESSION['login']=1;
   $_SESSION['member_name']=$user_info->name;
+  $_SESSION['picture']=$user_info->profile_image_url_https;
   
   //トップページへ
   header( 'location: cookie_top.php' );

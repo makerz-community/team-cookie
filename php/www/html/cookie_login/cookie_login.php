@@ -38,7 +38,7 @@
 
     $helper = $fb->getRedirectLoginHelper();
     $permissions = [];
-    $loginUrl = $helper->getLoginUrl('https://20c05d4f9786.ngrok.io/cookie_login/facebook_callback.php',$permissions);
+    $loginUrl = $helper->getLoginUrl('https://b97e2f7ab5ca.ngrok.io/cookie_login/facebook_callback.php',$permissions);
     
   ?>
 

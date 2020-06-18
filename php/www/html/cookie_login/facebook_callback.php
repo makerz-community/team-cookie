@@ -64,6 +64,7 @@ if (isset($accessToken)) {
 
   $_SESSION['login']=1;
   $_SESSION['member_name']=$first_name;
+  $_SESSION['picture']=$picture_url;
   
   //トップページへ
   header( 'location: cookie_top.php' );
