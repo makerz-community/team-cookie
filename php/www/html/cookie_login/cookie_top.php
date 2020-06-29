@@ -30,7 +30,7 @@ else
 require("../common.php");
 ?>
 
- <img src="<?php  print $_SESSION['picture']; ?>" alt="画像">
+ <img src="<?php print $_SESSION['picture']; ?>" alt="Facebook画像">
 
   <table><tbody>
    <tr><th>名前</th></tr>

@@ -49,12 +49,10 @@
   <title>（仮）cookie</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-
+<!-- emailとパスワードでログイン -->
   <div class="container">
-
-    <!-- emailとパスワードでログイン -->
-
       <h2>Member Sign in</h2>
       <br>
       <form action="cookie_login_check.php" method="post">
@@ -65,7 +63,6 @@
         <br>
         <input type="submit" value="Sign in">
       </form>
-
   </div>
 
 <br>
@@ -76,7 +73,6 @@
   <div class="twitter">
     <a href="<?php echo $oauthUrl; ?>"><img src="images/t_button.png" alt="twitter_button"></a>
   </div>
-
 <br>
 
   <!-- Facebookアカウントでログイン -->
