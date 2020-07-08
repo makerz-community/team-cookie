@@ -48,6 +48,5 @@ require("../common.php");
 ?>
 
 <a href="cookie_logout.php">ログアウト</a><br>
-
 </body>
 </html>

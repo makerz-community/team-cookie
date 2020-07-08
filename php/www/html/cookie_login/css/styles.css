@@ -12,6 +12,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
+  color: #333333;
 }
 
 .container {
@@ -24,4 +25,8 @@ img {
 
 table {
   margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
 }
