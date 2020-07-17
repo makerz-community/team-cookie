@@ -9,6 +9,11 @@
 <?php
 require("common.php");
 $id = $_POST['id'];
+$sql = 'SELECT * FROM members WHERE id=?';
+$stmt = $dbh -> prepare($sql);
+$data[] = $id;
+$stmt -> execute($data);
+
 $rec = $stmt->fetch(PDO::FETCH_ASSOC);
 $name = $rec['name'];
 $email = $rec['email'];
