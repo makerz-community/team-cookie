@@ -15,6 +15,7 @@ require("common.php");
    <tr><th>名前</th></tr>
 	 <?php foreach ($stmt as $row){ ?>
 	<tr>
+  <td><?php if (!empty($row['image'])) {echo '<img style = "width: 40px;" src="./images/' . $row['image'] . '">';}?></td>  
 	<td><?=htmlspecialchars($row['name'], ENT_QUOTES)?></td>
 	<td><a href=""=<?=htmlspecialchars($row['name'], ENT_QUOTES)?>>詳細ページ</a></td>
 	</tr>
