@@ -7,7 +7,7 @@
 <body>
 <?php 
 
-// try{
+try{
 $member_name=$_POST['name'];
 $member_email=$_POST['email'];
 $member_pass=$_POST['pass'];
@@ -39,10 +39,10 @@ $dbh=null;
 print '新規登録完了しました。<br>';
 print '<br>';
 
-// }catch (Exception $e){
-//     print 'ただいま障害により大変ご迷惑をおかけしております。';
-//     exit();
-// }
+}catch (Exception $e){
+    print 'ただいま障害により大変ご迷惑をおかけしております。';
+    exit();
+}
 ?>
 <a href="cookie_login.php"> ログイン画面へ</a>
 </body>
