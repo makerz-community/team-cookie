@@ -15,8 +15,17 @@ try
   $dsn = 'mysql:dbname=cookie_site;host=db;';
   $user = 'root';
   $password = 'root_password';
-  $dbh=new PDO($dsn,$user,$password);
-  $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+  // $dbh=new PDO($dsn,$user,$password);
+  // $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+  $dbh=new PDO(
+    $dsn,$user,$password,
+    array(
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_EMURATE_PREPARES => false,
+    )
+  );
+
+  throw new Exception("ただいま障害により大変ご迷惑をおかけしております。");  
 
   // sqlでデータを取り出す
   $sql='SELECT name FROM members WHERE email=? AND password=?';
@@ -50,6 +59,7 @@ try
 }
 catch(Exception $e)
 {
-  print 'ただいま障害により大変ご迷惑をおかけしております。';
+  // print 'ただいま障害により大変ご迷惑をおかけしております。';
+  print $e->getMessage();
   exit();
 }

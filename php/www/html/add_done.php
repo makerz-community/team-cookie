@@ -21,8 +21,17 @@ $member_pass=htmlspecialchars($member_pass,ENT_QUOTES,'UTF-8');
 $dsn='mysql:dbname=cookie_site;host=db;';
 $user='root';
 $password='root_password';
-$dbh=new PDO($dsn,$user,$password);
-$dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+// $dbh=new PDO($dsn,$user,$password);
+// $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+$dbh=new PDO(
+    $dsn,$user,$password,
+    array(
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_EMURATE_PREPARES => false,
+    )
+);
+
+throw new Exception("ただいま障害により大変ご迷惑をおかけしております。");
 
 //sqlでデータを挿入
 $sql='INSERT INTO members (name,email,password,created_date,updated_date,image) VALUES (?,?,?,current_timestamp,current_timestamp,?)';
@@ -40,7 +49,8 @@ print '新規登録完了しました。<br>';
 print '<br>';
 
 }catch (Exception $e){
-    print 'ただいま障害により大変ご迷惑をおかけしております。';
+    // print 'ただいま障害により大変ご迷惑をおかけしております。';
+    print $e->getMessage();
     exit();
 }
 ?>
