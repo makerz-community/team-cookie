@@ -4,20 +4,74 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c14baf3540cbb30990e71a0e7556093",
+    "content-hash": "697f25248b1ed6d05aa7f8ea1132284c",
     "packages": [
         {
-            "name": "cakephp/collection",
-            "version": "4.0.6",
+            "name": "abraham/twitteroauth",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/cakephp/collection.git",
-                "reference": "18393a716322585c86b46c852c396534d925926a"
+                "url": "https://github.com/abraham/twitteroauth.git",
+                "reference": "d54b71c2eee94252154e7b50656e17422fa0b9e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/collection/zipball/18393a716322585c86b46c852c396534d925926a",
-                "reference": "18393a716322585c86b46c852c396534d925926a",
+                "url": "https://api.github.com/repos/abraham/twitteroauth/zipball/d54b71c2eee94252154e7b50656e17422fa0b9e1",
+                "reference": "d54b71c2eee94252154e7b50656e17422fa0b9e1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": "^7.2 || ^7.3"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "~2.6",
+                "phpunit/phpunit": "~5.7",
+                "squizlabs/php_codesniffer": "~3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Abraham\\TwitterOAuth\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Abraham Williams",
+                    "email": "abraham@abrah.am",
+                    "homepage": "https://abrah.am",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The most popular PHP library for use with the Twitter OAuth REST API.",
+            "homepage": "https://twitteroauth.com",
+            "keywords": [
+                "Twitter API",
+                "Twitter oAuth",
+                "api",
+                "oauth",
+                "rest",
+                "social",
+                "twitter"
+            ],
+            "time": "2019-11-29T14:55:32+00:00"
+        },
+        {
+            "name": "cakephp/collection",
+            "version": "4.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/collection.git",
+                "reference": "df155a72defbafbe18b24e8f6fc9cc99fde46f8a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/collection/zipball/df155a72defbafbe18b24e8f6fc9cc99fde46f8a",
+                "reference": "df155a72defbafbe18b24e8f6fc9cc99fde46f8a",
                 "shasum": ""
             },
             "require": {
@@ -50,20 +104,20 @@
                 "collections",
                 "iterators"
             ],
-            "time": "2020-04-17T08:12:09+00:00"
+            "time": "2020-03-18T18:19:21+00:00"
         },
         {
             "name": "cakephp/core",
-            "version": "4.0.6",
+            "version": "4.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/core.git",
-                "reference": "d8463fec4f59cc1b9e4bd0faaa64991b130b961a"
+                "reference": "161491ceeaf2bbb4471f5af9832ee08e4408a274"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/core/zipball/d8463fec4f59cc1b9e4bd0faaa64991b130b961a",
-                "reference": "d8463fec4f59cc1b9e4bd0faaa64991b130b961a",
+                "url": "https://api.github.com/repos/cakephp/core/zipball/161491ceeaf2bbb4471f5af9832ee08e4408a274",
+                "reference": "161491ceeaf2bbb4471f5af9832ee08e4408a274",
                 "shasum": ""
             },
             "require": {
@@ -100,20 +154,20 @@
                 "core",
                 "framework"
             ],
-            "time": "2020-04-17T13:58:27+00:00"
+            "time": "2020-03-18T18:19:21+00:00"
         },
         {
             "name": "cakephp/database",
-            "version": "4.0.6",
+            "version": "4.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/database.git",
-                "reference": "ea6fb36fc9f76c5c6e5998380f7d7e485c867ab5"
+                "reference": "62bdc57e684cde9a772a8ce2a0627b7f4a0a4b1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/database/zipball/ea6fb36fc9f76c5c6e5998380f7d7e485c867ab5",
-                "reference": "ea6fb36fc9f76c5c6e5998380f7d7e485c867ab5",
+                "url": "https://api.github.com/repos/cakephp/database/zipball/62bdc57e684cde9a772a8ce2a0627b7f4a0a4b1a",
+                "reference": "62bdc57e684cde9a772a8ce2a0627b7f4a0a4b1a",
                 "shasum": ""
             },
             "require": {
@@ -149,20 +203,20 @@
                 "database abstraction",
                 "pdo"
             ],
-            "time": "2020-04-17T04:56:07+00:00"
+            "time": "2020-03-28T00:08:34+00:00"
         },
         {
             "name": "cakephp/datasource",
-            "version": "4.0.6",
+            "version": "4.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/datasource.git",
-                "reference": "5d5b1e3cde46fea804d3f4890a02388c4813a982"
+                "reference": "78f05ea212f9e6014c753601ee2dc8617e9ebe30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/datasource/zipball/5d5b1e3cde46fea804d3f4890a02388c4813a982",
-                "reference": "5d5b1e3cde46fea804d3f4890a02388c4813a982",
+                "url": "https://api.github.com/repos/cakephp/datasource/zipball/78f05ea212f9e6014c753601ee2dc8617e9ebe30",
+                "reference": "78f05ea212f9e6014c753601ee2dc8617e9ebe30",
                 "shasum": ""
             },
             "require": {
@@ -201,20 +255,20 @@
                 "entity",
                 "query"
             ],
-            "time": "2020-04-16T21:20:43+00:00"
+            "time": "2020-03-13T12:57:56+00:00"
         },
         {
             "name": "cakephp/utility",
-            "version": "4.0.6",
+            "version": "4.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/utility.git",
-                "reference": "6c6e2a2892d077fa5e6cfdf02e36a821452213af"
+                "reference": "7e2fb6df26fe8912f364ae4adb58e3707483c598"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/utility/zipball/6c6e2a2892d077fa5e6cfdf02e36a821452213af",
-                "reference": "6c6e2a2892d077fa5e6cfdf02e36a821452213af",
+                "url": "https://api.github.com/repos/cakephp/utility/zipball/7e2fb6df26fe8912f364ae4adb58e3707483c598",
+                "reference": "7e2fb6df26fe8912f364ae4adb58e3707483c598",
                 "shasum": ""
             },
             "require": {
@@ -254,7 +308,7 @@
                 "string",
                 "utility"
             ],
-            "time": "2020-04-17T04:56:07+00:00"
+            "time": "2020-02-07T20:50:22+00:00"
         },
         {
             "name": "psr/container",
